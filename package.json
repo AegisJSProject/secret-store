@@ -88,7 +88,7 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@shgysk8zer0/eslint-config": "^1.0.4",
     "@shgysk8zer0/rollup-import": "^1.2.6",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "http-server": "^14.1.1",
     "rollup": "^4.47.1"
   },
