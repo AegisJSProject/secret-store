@@ -81,7 +81,7 @@
     "@shgysk8zer0/rollup-import": "^1.2.6",
     "eslint": "^9.34.0",
     "http-server": "^14.1.1",
-    "rollup": "^4.49.0"
+    "rollup": "^4.50.0"
   },
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.4",
