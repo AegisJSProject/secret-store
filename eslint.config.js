@@ -1,3 +1,3 @@
 import browser from '@shgysk8zer0/eslint-config/browser.js';
 
-export default browser({files: ['**/*.js'] });
+export default browser({ files: ['secret-store.js'] });
