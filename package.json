@@ -1,6 +1,6 @@
 {
   "name": "@aegisjsproject/secret-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Proxy-based wrapper for encrypting and decrypting data over any storage object",
   "keywords": [
     "aegis",

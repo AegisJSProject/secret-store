@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.0.1] - 2025-09-04
+
+### Added
+- Add `openSecretStoreFile` to open secret store from JSON file (node)
+
 ## [v1.0.0] - 2025-09-04
 
 Initial Release

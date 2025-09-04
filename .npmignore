@@ -1,4 +1,6 @@
 node_modules/
+secrets.json
+key.jwk
 test/
 .github/
 test/
