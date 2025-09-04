@@ -1,5 +1,5 @@
 import terser from '@rollup/plugin-terser';
-const externalPackages = ['@shgysk8zer0/aes-gcm'];
+const externalPackages = ['@shgysk8zer0/aes-gcm', 'node:'];
 
 export default {
 	input: 'secret-store.js',
