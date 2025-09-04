@@ -1,24 +1,24 @@
-# `@aegisjsproject/template`
+# `@aegisjsproject/secret-store`
 
-Template repository for [`@aegisjsproject/component`](https://github.com/AegisJSProject/component) components
+Proxy-based wrapper for encrypting and decrypting data over any storage object
 
-[![CodeQL](https://@github.com/AegisJSProject/template/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/shgysk8zer0/npm-template/actions/workflows/codeql-analysis.yml)
-![Node CI](https://@github.com/AegisJSProject/template/workflows/Node%20CI/badge.svg)
-![Lint Code Base](https://@github.com/AegisJSProject/template/workflows/Lint%20Code%20Base/badge.svg)
+[![CodeQL](https://@github.com/AegisJSProject/secret-store/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/shgysk8zer0/npm-template/actions/workflows/codeql-analysis.yml)
+![Node CI](https://@github.com/AegisJSProject/secret-store/workflows/Node%20CI/badge.svg)
+![Lint Code Base](https://@github.com/AegisJSProject/secret-store/workflows/Lint%20Code%20Base/badge.svg)
 
-[![GitHub license](https://img.shields.io/github/license/AegisJSProject/template.svg)](https://@github.com/AegisJSProject/template/blob/master/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/AegisJSProject/template.svg)](https://@github.com/AegisJSProject/template/commits/master)
-[![GitHub release](https://img.shields.io/github/release/AegisJSProject/template?logo=github)](https://@github.com/AegisJSProject/template/releases)
+[![GitHub license](https://img.shields.io/github/license/AegisJSProject/secret-store.svg)](https://@github.com/AegisJSProject/secret-store/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/AegisJSProject/secret-store.svg)](https://@github.com/AegisJSProject/secret-store/commits/master)
+[![GitHub release](https://img.shields.io/github/release/AegisJSProject/secret-store?logo=github)](https://@github.com/AegisJSProject/secret-store/releases)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/shgysk8zer0?logo=github)](https://github.com/sponsors/shgysk8zer0)
 
-[![npm](https://img.shields.io/npm/v/@aegisjsproject/template)](https://www.npmjs.com/package/@aegisjsproject/template)
-![node-current](https://img.shields.io/node/v/@aegisjsproject/template)
-![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40aegisjsproject%template)
-[![npm](https://img.shields.io/npm/dw/@aegisjsproject/npm-template?logo=npm)](https://www.npmjs.com/package/@aegisjsproject/template)
+[![npm](https://img.shields.io/npm/v/@aegisjsproject/secret-store)](https://www.npmjs.com/package/@aegisjsproject/secret-store)
+![node-current](https://img.shields.io/node/v/@aegisjsproject/secret-store)
+![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40aegisjsproject%secret-store)
+[![npm](https://img.shields.io/npm/dw/@aegisjsproject/secret-store?logo=npm)](https://www.npmjs.com/package/@aegisjsproject/secret-store)
 
 [![GitHub followers](https://img.shields.io/github/followers/AegisJSProject.svg?style=social)](https://github.com/AegisJSProoject)
-![GitHub forks](https://img.shields.io/github/forks/AegisJSProject/template.svg?style=social)
-![GitHub stars](https://img.shields.io/github/stars/AegisJSProject/template.svg?style=social)
+![GitHub forks](https://img.shields.io/github/forks/AegisJSProject/secret-store.svg?style=social)
+![GitHub stars](https://img.shields.io/github/stars/AegisJSProject/secret-store.svg?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/shgysk8zer0.svg?style=social)](https://twitter.com/shgysk8zer0)
 
 [![Donate using Liberapay](https://img.shields.io/liberapay/receives/shgysk8zer0.svg?logo=liberapay)](https://liberapay.com/shgysk8zer0/donate "Donate using Liberapay")
@@ -45,7 +45,7 @@ components. It provides the essentials, such as:
 - Automated releases to npm on `git tag` (when pushed using `git push --tags`)
 - Provides GitHub Action for Package Provenance
 
-To start creating your own component, just go to the [GitHub repo](https://@github.com/AegisJSProject/template)
+To start creating your own component, just go to the [GitHub repo](https://@github.com/AegisJSProject/secret-store)
 and click the "Use this template" button.
 
 ## Steps to Create a Component

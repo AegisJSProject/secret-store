@@ -1,31 +1,21 @@
 {
-  "name": "@aegisjsproject/tempplate",
-  "version": "0.0.5",
-  "description": "Template repository for `@aegisjsproject/component` components",
+  "name": "@aegisjsproject/secret-store",
+  "version": "1.0.0",
+  "description": "Proxy-based wrapper for encrypting and decrypting data over any storage object",
   "keywords": [
     "aegis",
-    "dom",
-    "html",
-    "css",
-    "theming",
     "secure",
-    "sanitizer-api",
-    "html-templates",
-    "constructable-stylesheets",
-    "custom-elements",
-    "web-components",
-    "component-library",
-    "aegis-template",
-    "github-template"
+    "crypto",
+    "secret-store"
   ],
   "type": "module",
-  "main": "./hello-world.cjs",
-  "module": "./hello-world.js",
-  "unpkg": "./hello-world.js",
+  "main": "./secret-store.cjs",
+  "module": "./secret-store.js",
+  "unpkg": "./secret-store.min.js",
   "exports": {
     ".": {
-      "import": "./hello-world.js",
-      "require": "./hello-world.cjs"
+      "import": "./secret-store.js",
+      "require": "./secret-store.cjs"
     },
     "./*.js": {
       "import": "./*.js",
@@ -49,13 +39,14 @@
   },
   "private": false,
   "scripts": {
-    "test": "npm run lint:js && npm run build",
-    "start": "http-server ./ -c-1 --port 8080 --gzip true --brotli true -a localhost -o /test/",
+    "test": "npm run lint:js && npm run run:tests && npm run build",
     "preversion": "npm test",
     "prepare": "npm run build",
     "lint:js": "eslint .",
     "fix:js": "eslint . --fix",
     "build": "npm run build:js",
+    "run:tests": "node --test",
+    "coverage": "node --test --experimental-test-coverage",
     "clean": "rm -f ./*.cjs",
     "build:js": "npm run clean && rollup -c rollup.config.js",
     "create:lock": "npm i --package-lock-only --ignore-scripts --no-audit --no-fund",
@@ -66,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AegisJSProject/template.git"
+    "url": "git+https://github.com/AegisJSProject/secret-store.git"
   },
   "author": "Chris Zuber <admin@kernvalley.us>",
   "license": "MIT",
@@ -81,20 +72,19 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/AegisJSProject/template/issues"
+    "url": "https://github.com/AegisJSProject/secret-store/issues"
   },
-  "homepage": "https://github.com/AegisJSProject/template#readme",
+  "homepage": "https://github.com/AegisJSProject/secret-store#readme",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^16.0.1",
     "@shgysk8zer0/eslint-config": "^1.0.4",
+    "@shgysk8zer0/polyfills": "^0.4.12",
     "@shgysk8zer0/rollup-import": "^1.2.6",
     "eslint": "^9.34.0",
     "http-server": "^14.1.1",
     "rollup": "^4.49.0"
   },
   "dependencies": {
-    "@aegisjsproject/component": "^0.1.6",
-    "@aegisjsproject/core": "^0.2.25",
-    "@aegisjsproject/styles": "^0.2.7"
+    "@rollup/plugin-terser": "^0.4.4",
+    "@shgysk8zer0/aes-gcm": "^1.0.8"
   }
 }
