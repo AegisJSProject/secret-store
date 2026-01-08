@@ -77,7 +77,7 @@
   "homepage": "https://github.com/AegisJSProject/secret-store#readme",
   "devDependencies": {
     "@shgysk8zer0/eslint-config": "^1.0.4",
-    "@shgysk8zer0/polyfills": "^0.5.0",
+    "@shgysk8zer0/polyfills": "^0.6.0",
     "@shgysk8zer0/rollup-import": "^1.2.6",
     "eslint": "^9.34.0",
     "http-server": "^14.1.1",
