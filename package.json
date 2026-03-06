@@ -84,7 +84,7 @@
     "rollup": "^4.50.0"
   },
   "dependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-terser": "^1.0.0",
     "@shgysk8zer0/aes-gcm": "^1.0.8"
   }
 }
