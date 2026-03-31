@@ -1,6 +1,6 @@
 {
   "name": "@aegisjsproject/secret-store",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Proxy-based wrapper for encrypting and decrypting data over any storage object",
   "keywords": [
     "aegis",
@@ -76,12 +76,11 @@
   },
   "homepage": "https://github.com/AegisJSProject/secret-store#readme",
   "devDependencies": {
-    "@shgysk8zer0/eslint-config": "^1.0.4",
-    "@shgysk8zer0/polyfills": "^0.6.0",
-    "@shgysk8zer0/rollup-import": "^2.0.2",
-    "eslint": "^10.0.0",
+    "@shgysk8zer0/eslint-config": "^1.0.9",
+    "@shgysk8zer0/rollup-import": "^2.0.3",
+    "eslint": "^10.1.0",
     "http-server": "^14.1.1",
-    "rollup": "^4.50.0"
+    "rollup": "^4.60.1"
   },
   "dependencies": {
     "@rollup/plugin-terser": "^1.0.0",
