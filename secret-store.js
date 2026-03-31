@@ -62,7 +62,10 @@ export function useSecretStore(key, targetObject = globalThis.process?.env ?? {}
 			...handler,
 			set(target, property, newValue) {
 				const writeStack = new DisposableStack();
-				const { promise, resolve, reject } = writeStack.adopt(Promise.withResolvers(), ({ reject }) => reject(new DOMException('Write aborted', 'AbortError')));
+				const { promise, resolve, reject } = writeStack.adopt(
+					Promise.withResolvers(),
+					({ reject }) => reject(new DOMException('Write aborted', 'AbortError'))
+				);
 
 				if (sig.aborted) {
 					reject(sig.reason);
@@ -84,7 +87,9 @@ export function useSecretStore(key, targetObject = globalThis.process?.env ?? {}
 						} else {
 							Reflect.set(target, property, encrypted);
 						}
-					}).then(() => resolve()).catch(reject).finally(() => writing.get(property)?.stack === writeStack && writing.delete(property));
+					}).then(() => resolve())
+						.catch(reject)
+						.finally(() => writing.get(property)?.stack === writeStack && writing.delete(property));
 
 					return true;
 				}
@@ -109,7 +114,10 @@ export function useSecretStore(key, targetObject = globalThis.process?.env ?? {}
 		const setter = key.usages.includes('encrypt')
 			? async (property, value) => {
 				const writeStack = new DisposableStack();
-				const { promise, resolve, reject } = writeStack.adopt(Promise.withResolvers(), ({ reject }) => reject(new DOMException('Write aborted', 'AbortError')));
+				const { promise, resolve, reject } = writeStack.adopt(
+					Promise.withResolvers(),
+					({ reject }) => reject(new DOMException('Write aborted', 'AbortError'))
+				);
 
 				if (sig.aborted) {
 					reject(new TypeError('illegal operation attempted on a revoked proxy', { cause: sig.reason }));
@@ -120,15 +128,19 @@ export function useSecretStore(key, targetObject = globalThis.process?.env ?? {}
 
 					writing.set(property, { promise, stack: writeStack });
 
-					encrypt(key, value, { output: BASE64 }).then(encrypted => {
+					encrypt(key, value, { output: BASE64 }).then(async encrypted => {
 						sig.throwIfAborted();
 
 						if (writeStack.disposed) {
-							throw new DOMException('Write aborted', 'AbortError');
+							throw new DOMException('Write cancelled', 'AbortError');
+						} else if (typeof handler.set === 'function') {
+							await Promise.try(() => handler.set(targetObject, property, encrypted));
 						} else {
-							resolve(Reflect.set(targetObject, property, encrypted));
+							Reflect.set(targetObject, property, encrypted);
 						}
-					}).catch(reject).finally(() => writing.get(property)?.stack === writeStack && writing.delete(property));
+					}).then(() => resolve(true))
+						.catch(reject)
+						.finally(() => writing.get(property)?.stack === writeStack && writing.delete(property));
 				}
 
 				return promise;
