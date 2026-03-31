@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.0] - 2026-03-31
+
+### Added
+- Add disposable/revokable support for store proxies
+- Add writable file store implementation
+
+### Fixed
+- Fixed race conditions to handle setters & getters
+
+### Changed
+- Update to node 25.3.0
+- Update npm publishing
+- Update dependencies
+
 ## [v1.0.1] - 2025-09-04
 
 ### Added
